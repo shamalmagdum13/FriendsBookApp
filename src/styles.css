@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-error {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.link-btn {
+    margin-right: 14rem;
+}
+
+.main-card {
+    max-width: 100%;
+    min-width: 30%;
+    height: fit-content;
+    margin: 50px auto auto auto;
+    width: fit-content;
+}
+
+.card-title {
+    font-size: 25px;
+    text-align: center;
+    background: #8996dd;
+    color: #fff;
+    padding: 10px;
+}
+
+.max-width {
+    width: 100%;
+}
+
+.button {
+    background: #8996dd; 
+}

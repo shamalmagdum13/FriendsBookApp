@@ -1,0 +1,43 @@
+<mat-card class="main-card">
+    <mat-card-title class="card-title">LOGIN</mat-card-title>
+    <hr class="dialog-title-hr">
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <table class="max-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="max-width" appearance="outline">
+                            <mat-label>User Name</mat-label>
+                            <input matInput formControlName="username">
+                            <mat-error *ngIf="username.hasError('required')">
+                                Please enter registered User Name
+                            </mat-error>
+                            <mat-error *ngIf="username.hasError('minlength')">
+                                User Name must have at least 3 characters
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="max-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                            <mat-icon matSuffix (click)="hide = !hide" [ngStyle]="{'color': hide ? '#000' : '#3f51b5'}">
+                                {{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
+                            <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+                            <mat-error *ngIf="password.hasError('minlength')">
+                                Password must have at least 8 characters
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <mat-card-actions>
+                <a class="link-btn" [routerLink]="['/forgot-password']">Forgot password</a>
+                <button mat-raised-button class="button" type="submit">login</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

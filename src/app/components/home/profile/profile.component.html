@@ -1,0 +1,20 @@
+<mat-card class="profile-card">
+    <div>
+        <label for="file-input">
+            <div fxLayoutAlign="center">
+                <span>
+                    <img src="./../../../../assets/user-male.png" class="profile-photo">
+                </span>
+            </div>
+        </label>
+        <input type="file" name="picture" id="file-input" accept="image/*" />
+    </div>
+
+    <p class="user-name">{{profileCard.firstName}} {{profileCard.lastName}}</p>
+    <p class="user-address">{{profileCard.city}}</p>
+    <hr>
+    <div class="user-info">Connections</div>
+    <hr>
+    <div class="user-info">Posts</div>
+    <hr>
+</mat-card>
